@@ -6,10 +6,6 @@ Segue abaixo uma nova versão da solução, formatada como uma proposta para o c
 
 **Proposta de Solução para Iniciar e Acessar Máquinas Virtuais no Proxmox via Frontend**
 
-Prezado cliente,
-
-Com base em sua necessidade de automatizar o gerenciamento de máquinas virtuais no Proxmox VE e permitir o acesso remoto direto pelo navegador, proponho a seguinte solução, estruturada em etapas e utilizando tecnologias modernas e seguras.
-
 ---
 
 ### **Fluxo da Solução**
@@ -75,9 +71,6 @@ graph TD
 - **Centralização:** O gerenciamento das VMs será feito de forma centralizada e automatizada, reduzindo a complexidade operacional.
 
 ---
-
-Com essa solução, esperamos atender plenamente às suas expectativas de funcionalidade e segurança. Estamos à disposição para esclarecer quaisquer dúvidas ou realizar ajustes na proposta.
-
 ### **Monitoramento das Máquinas Virtuais**
 
 **Backend:**
