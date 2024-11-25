@@ -1,13 +1,5 @@
 # Cecyber
 
-Segue abaixo uma nova versão da solução, formatada como uma proposta para o cliente, incluindo um diagrama em formato **Mermaid**.
-
----
-
-**Proposta de Solução para Iniciar e Acessar Máquinas Virtuais no Proxmox via Frontend**
-
----
-
 ### **Fluxo da Solução**
 
 1. **Iniciar a Máquina Virtual via API:**
