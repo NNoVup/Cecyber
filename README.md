@@ -111,6 +111,3 @@ graph TD
     M --> A
 ```
 
----
-
-Essa adição permite que o cliente não apenas inicie e acesse as máquinas virtuais, mas também monitore seu desempenho em tempo real, melhorando o controle e a eficiência do ambiente virtualizado.
