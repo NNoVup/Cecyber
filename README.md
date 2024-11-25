@@ -77,3 +77,47 @@ graph TD
 ---
 
 Com essa solução, esperamos atender plenamente às suas expectativas de funcionalidade e segurança. Estamos à disposição para esclarecer quaisquer dúvidas ou realizar ajustes na proposta.
+
+### **Monitoramento das Máquinas Virtuais**
+
+**Backend:**
+- O backend realizará requisições periódicas à API do Proxmox para obter métricas de desempenho das máquinas virtuais, como:
+  - Uso de CPU
+  - Consumo de memória
+  - Taxa de I/O de disco
+  - Tráfego de rede
+  - Status das VMs (ligada/desligada)
+- Essas informações serão armazenadas temporariamente para exibição em tempo real no frontend.
+
+**Frontend:**
+- O frontend exibirá essas métricas em painéis interativos, permitindo ao usuário monitorar o desempenho das VMs em tempo real.
+- Alertas visuais podem ser configurados para informar o usuário sobre situações críticas, como uso excessivo de recursos.
+
+**Ações Disponíveis:**
+- Os usuários poderão iniciar/parar máquinas diretamente do painel de monitoramento.
+- Gráficos históricos serão exibidos para analisar tendências de desempenho.
+
+---
+
+### **Diagrama de Funcionamento**
+
+```mermaid
+graph TD
+    A[Usuário no Browser] --> B[Frontend App]
+    B --> C[Proxmox API]
+    C --> D[Inicia VM no Proxmox]
+    D --> E[Proxmox Hypervisor]
+    E --> F[VM Iniciada]
+    F --> G[Proxmox API - Ticket VNC]
+    G --> H[Frontend noVNC Cliente]
+    H --> I[WebSocket para VM]
+    I --> J[Interação Remota na VM]
+    E --> K[Proxmox API - Métricas de Monitoramento]
+    K --> L[Backend - Coleta de Métricas]
+    L --> M[Frontend - Painel de Monitoramento]
+    M --> A
+```
+
+---
+
+Essa adição permite que o cliente não apenas inicie e acesse as máquinas virtuais, mas também monitore seu desempenho em tempo real, melhorando o controle e a eficiência do ambiente virtualizado.
