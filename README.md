@@ -62,15 +62,6 @@ graph TD
    - As máquinas virtuais serão configuradas para rodar sistemas operacionais ou aplicações específicas, de acordo com as demandas do cliente.
 
 ---
-
-### **Vantagens da Solução**
-
-- **Segurança:** Toda a comunicação será protegida por HTTPS, e os tickets VNC terão validade limitada para garantir acesso seguro.
-- **Automação:** A integração com a API do Proxmox permite que os processos sejam escaláveis e facilmente replicáveis.
-- **Flexibilidade:** Usuários poderão acessar as máquinas virtuais de qualquer dispositivo com navegador, eliminando a necessidade de clientes específicos.
-- **Centralização:** O gerenciamento das VMs será feito de forma centralizada e automatizada, reduzindo a complexidade operacional.
-
----
 ### **Monitoramento das Máquinas Virtuais**
 
 **Backend:**
@@ -110,4 +101,13 @@ graph TD
     L --> M[Frontend - Painel de Monitoramento]
     M --> A
 ```
+### **Vantagens da Solução**
+
+- **Segurança:** Toda a comunicação será protegida por HTTPS, e os tickets VNC terão validade limitada para garantir acesso seguro.
+- **Automação:** A integração com a API do Proxmox permite que os processos sejam escaláveis e facilmente replicáveis.
+- **Flexibilidade:** Usuários poderão acessar as máquinas virtuais de qualquer dispositivo com navegador, eliminando a necessidade de clientes específicos.
+- **Centralização:** O gerenciamento das VMs será feito de forma centralizada e automatizada, reduzindo a complexidade operacional.
+- **Monitoramento Facilitado:** O monitoramento via frontend proporciona uma visão clara e intuitiva do estado das máquinas virtuais e dos recursos alocados, permitindo identificação rápida de problemas e tomada de decisão informada.
+- **Interface Amigável:** Uma interface gráfica bem projetada melhora a experiência do usuário, tornando mais fácil gerenciar e monitorar as VMs sem a necessidade de comandos complexos.
+- **Acompanhamento em Tempo Real:** Através do frontend, é possível acompanhar métricas de desempenho e eventos em tempo real, garantindo maior controle e eficiência na administração dos recursos.
 
