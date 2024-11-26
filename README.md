@@ -359,53 +359,25 @@ Com esses casos de uso adicionais, sua aplicação terá maior alcance e aplicab
 
 ### **Diagrama de Casos de Uso e Integrações**
 
+### **Diagrama de Casos de Uso e Integrações**
+
 <div class="mermaid">
 graph TD
-    %% Categorias Principais
-    A[Gestão de Recursos do Nó]
-    B[Gerenciamento de Backup]
-    C[Controle Avançado de VMs]
-    D[Automação e Agendamento]
-    E[Auditoria e Logs]
-    F[Gestão de Usuários e Permissões]
-    G[Extensões e Integrações]
-    %% Gestão de Recursos do Nó
-    A --> A1[Monitorar Utilização do Nó]
+    A[Gestão de Recursos do Nó] --> A1[Monitorar Utilização do Nó]
     A1 -->|API: GET /nodes/{node}/status| P1[Servidor Proxmox]
     A --> A2[Exibir Informações do Nó]
     A2 -->|API: GET /nodes/{node}| P1
-    %% Gerenciamento de Backup
-    B --> B1[Agendar Backups Automáticos]
+    B[Gerenciamento de Backup] --> B1[Agendar Backups Automáticos]
     B1 -->|API: POST /nodes/{node}/vzdump| P1
     B --> B2[Restaurar VMs a Partir de Backups]
     B2 -->|API: POST /nodes/{node}/qemu| P1
-    %% Controle Avançado de VMs
-    C --> C1[Clonar Máquinas Virtuais]
+    C[Controle Avançado de VMs] --> C1[Clonar Máquinas Virtuais]
     C1 -->|API: POST /nodes/{node}/qemu/{vmid}/clone| P1
     C --> C2[Alterar Configuração de VMs]
     C2 -->|API: PUT /nodes/{node}/qemu/{vmid}/config| P1
-    C --> C3[Migrar VMs Entre Nós]
-    C3 -->|API: POST /nodes/{node}/qemu/{vmid}/migrate| P1
-    %% Automação e Agendamento
-    D --> D1[Agendar Início e Parada de VMs]
+    D[Automação e Agendamento] --> D1[Agendar Início e Parada de VMs]
     D1 -->|Gerenciado pelo Backend| P1
-    D --> D2[Scripts Personalizados]
-    D2 -->|Configuração no Backend ou Proxmox| P1
-    %% Auditoria e Logs
-    E --> E1[Exibir Histórico de Eventos]
+    E[Auditoria e Logs] --> E1[Exibir Histórico de Eventos]
     E1 -->|API: GET /cluster/log| P1
-    E --> E2[Monitorar Alertas de Sistema]
-    E2 -->|Backend interpretando dados do Proxmox| P1
-    %% Gestão de Usuários e Permissões
-    F --> F1[Controle de Acesso Baseado em Funções]
-    F1 -->|API: POST /access/roles| P1
-    F --> F2[Criar e Gerenciar Usuários]
-    F2 -->|API: POST /access/users| P1
-    %% Extensões e Integrações
-    G --> G1[Integração com Monitoramento Externo]
-    G1 -->|API: GET /nodes/{node}/rrddata| P1
-    G --> G2[Notificações por Email ou SMS]
-    G2 -->|Configurado pelo Backend| P1
-    %% Servidor Proxmox
     P1[Servidor Proxmox]
 </div>
