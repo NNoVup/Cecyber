@@ -357,8 +357,9 @@ Com esses casos de uso adicionais, sua aplicação terá maior alcance e aplicab
 
 ### **Diagrama de Casos de Uso e Integrações**
 
+### **Diagrama de Casos de Uso e Integrações**
+
 <div class="mermaid">
-   
 graph TD
     %% Categorias Principais
     A[Gestão de Recursos do Nó]
@@ -416,5 +417,3 @@ graph TD
     %% Servidor Proxmox
     P1[Servidor Proxmox]
 </div>
-```
-
