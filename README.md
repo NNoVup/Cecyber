@@ -1,3 +1,8 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
 # Cecyber
 
 ### **Fluxo da Solução**
@@ -412,7 +417,4 @@ graph TD
     P1[Servidor Proxmox]
 </div>
 ```
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-    mermaid.initialize({ startOnLoad: true });
-</script>
+
