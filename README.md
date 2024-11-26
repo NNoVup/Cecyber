@@ -97,13 +97,6 @@ graph TD
 
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-    mermaid.initialize({ startOnLoad: true });
-</script>
-
----
-
 ### **Vantagens da Solução**
 
 - **Segurança:** Toda a comunicação será protegida por HTTPS, e os tickets VNC terão validade limitada para garantir acesso seguro.
@@ -359,7 +352,8 @@ Com esses casos de uso adicionais, sua aplicação terá maior alcance e aplicab
 
 ### **Diagrama de Casos de Uso e Integrações**
 
-```mermaid
+<div class="mermaid">
+   
 graph TD
     %% Categorias Principais
     A[Gestão de Recursos do Nó]
@@ -416,5 +410,9 @@ graph TD
 
     %% Servidor Proxmox
     P1[Servidor Proxmox]
-
+</div>
 ```
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({ startOnLoad: true });
+</script>
