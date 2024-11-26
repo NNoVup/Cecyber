@@ -364,20 +364,19 @@ Com esses casos de uso adicionais, sua aplicação terá maior alcance e aplicab
 <div class="mermaid">
 graph TD
     A[Gestão de Recursos do Nó] --> A1[Monitorar Utilização do Nó]
-    A1 -->|API: GET /nodes/{node}/status| P1[Servidor Proxmox]
+    A1 --> P1[API: GET /status]
     A --> A2[Exibir Informações do Nó]
-    A2 -->|API: GET /nodes/{node}| P1
+    A2 --> P2[API: GET /nodes/]
     B[Gerenciamento de Backup] --> B1[Agendar Backups Automáticos]
-    B1 -->|API: POST /nodes/{node}/vzdump| P1
+    B1 --> P3[API: POST /nodes/vzdump]
     B --> B2[Restaurar VMs a Partir de Backups]
-    B2 -->|API: POST /nodes/{node}/qemu| P1
+    B2 --> P4[API: POST /nodes/qemu]
     C[Controle Avançado de VMs] --> C1[Clonar Máquinas Virtuais]
-    C1 -->|API: POST /nodes/{node}/qemu/{vmid}/clone| P1
+    C1 --> P5[API: POST /nodes/qemu/clone]
     C --> C2[Alterar Configuração de VMs]
-    C2 -->|API: PUT /nodes/{node}/qemu/{vmid}/config| P1
+    C2 --> P6[API: PUT /nodes/qemu/config]
     D[Automação e Agendamento] --> D1[Agendar Início e Parada de VMs]
-    D1 -->|Gerenciado pelo Backend| P1
+    D1 --> P7[Gerenciado pelo Backend]
     E[Auditoria e Logs] --> E1[Exibir Histórico de Eventos]
-    E1 -->|API: GET /cluster/log| P1
-    P1[Servidor Proxmox]
+    E1 --> P8[API: GET /cluster/log]
 </div>
