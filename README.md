@@ -357,10 +357,6 @@ Com esses casos de uso adicionais, sua aplicação terá maior alcance e aplicab
 
 ### **Diagrama de Casos de Uso e Integrações**
 
-### **Diagrama de Casos de Uso e Integrações**
-
-### **Diagrama de Casos de Uso e Integrações**
-
 <div class="mermaid">
 graph TD
     A[Gestão de Recursos do Nó] --> A1[Monitorar Utilização do Nó]
